@@ -1,2 +1,2 @@
-# Ecclesiapp-php
-Ecclesiapp para php creado para la Arquiciocesis de Managua en Laravel 
+# Ecclesiapp
+Ecclesiapp creado para la Arquiciocesis de Managua en Laravel PHP 
