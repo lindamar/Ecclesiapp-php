@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Ecclesiapp
                 </div>
 
                 <div class="links">
