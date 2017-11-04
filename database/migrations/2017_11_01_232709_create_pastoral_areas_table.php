@@ -15,7 +15,12 @@ class CreatePastoralAreasTable extends Migration
     {
         Schema::create('pastoral_areas', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->integer('diocese_id')->unsigned();
             $table->timestamps();
+
+            $table->foreign('diocese_id')->references('id')->on('diocese')->onDelete('cascade');
+
         });
     }
 

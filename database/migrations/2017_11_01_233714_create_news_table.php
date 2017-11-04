@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTypesActivitiesTable extends Migration
+class CreateNewsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,15 @@ class CreateTypesActivitiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('types_activities', function (Blueprint $table) {
+        Schema::create('news', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('title');
+            $table->string('news');
+            $table->string('image');
+            $table->integer('churches_id')->unsigned();
             $table->timestamps();
+
+            $table->foreign('churches_id')->references('id')->on('churches')->onDelete('cascade');
         });
     }
 
@@ -26,6 +32,6 @@ class CreateTypesActivitiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('types_activities');
+        Schema::dropIfExists('news');
     }
 }

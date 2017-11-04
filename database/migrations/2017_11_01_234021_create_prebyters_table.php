@@ -15,7 +15,19 @@ class CreatePrebytersTable extends Migration
     {
         Schema::create('prebyters', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('lastname');
+            $table->string('confer_card');
+            $table->string('nickname');
+            $table->string('ordenation_date');
+            $table->string('photo_cover');
+            $table->integer('users_id')->unsigned();
+            $table->integer('churches_id')->unsigned();
             $table->timestamps();
+
+            $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('churches_id')->references('id')->on('churches')->onDelete('cascade');
+
         });
     }
 

@@ -15,6 +15,7 @@ class CreateEcclesiasticalTradesTable extends Migration
     {
         Schema::create('ecclesiastical_trades', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('type');
             $table->timestamps();
         });
     }
