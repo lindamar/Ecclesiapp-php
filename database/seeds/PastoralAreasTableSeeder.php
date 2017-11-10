@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class pastoral_areas extends Seeder
+class PastoralAreas extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,8 @@ class pastoral_areas extends Seeder
      */
     public function run()
     {
-      [ //1
+      DB::table('pastoral_areas')->insert([
+        [ //1
         'name' => 'Zona Oriental',
         'created_at' => now(),
         'updated_at' => now(),

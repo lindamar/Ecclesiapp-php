@@ -18,6 +18,6 @@ class DatabaseSeeder extends Seeder
         $this->call(DepartmentsTableSeeder ::class);
         $this->call(MunicipalitiesTableSeeder ::class);
         $this->call(DioceseTableSeeder ::class);
-        $this->call(pastoral_areas ::class);
+        $this->call(PastoralAreas ::class);
     }
 }
