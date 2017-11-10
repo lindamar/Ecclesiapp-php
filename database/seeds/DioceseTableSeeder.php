@@ -11,6 +11,6 @@ class DioceseTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+    
     }
 }
